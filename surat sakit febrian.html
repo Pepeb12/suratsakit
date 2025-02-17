@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Sakti</title>
+    <style>
+        body {
+            background: black;
+        }
+        .kertas_a4 {
+            width: 21cm;
+            height: 29.7cm;
+            background: white;
+            padding: 2cm 2cm 2cm 2cm;
+            margin: auto;
+            font-family: "Times New Roman";
+            font-size: 12pt;
+            line-height: 150%;
+        }
+        /* Gaya tambahan untuk elemen lain di sini */
+    </style>
+</head>
+<body>
+    <div class="kertas_a4">
+        <h1 class="judul">SURAT IZIN SAKIT</h1>
+        <p class="titimangsa">Yogyakarta, 17 Februari 2025</p>
+        <p class="kepada_yth">Kepada Yth. <br />
+        <b>Bapak/Ibu Guru Wali Kelas</b> <br />
+        [Nama Sekolah] <br />
+        di Tempat</p>
+        <p>Dengan hormat,</p>
+        <p>Saya yang bertanda tangan di bawah ini:</p>
+        <ul>
+            <li>Nama: [Nama Siswa]</li>
+            <li>Kelas: [Kelas]</li>
+            <li>NIS: [Nomor Induk Siswa]</li>
+        </ul>
+        <p>Dengan ini menginformasikan bahwa anak saya tidak dapat mengikuti kegiatan belajar di sekolah pada hari [tanggal izin] dikarenakan sakit. Oleh karena itu, kami mohon izin kepada Bapak/Ibu Guru agar diberikan keringanan selama masa pemulihan.</p>
+        <p>Demikian surat ini kami buat dengan sebenar-benarnya. Atas perhatian dan pengertiannya, kami ucapkan terima kasih.</p>
+        <div class="blok_ttd">Hormati kami,</div>
+        <p class="nama_ttd">[Nama Orang Tua/Wali]<br>[Tanda Tangan]</p>
+        
+        <!-- Tombol Print -->
+        <button onclick="printDocument()">Print</button>
+    </div>
+
+    <script>
+        function printDocument() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
