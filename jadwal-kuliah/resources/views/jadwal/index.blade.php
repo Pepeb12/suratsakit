@@ -529,7 +529,21 @@
             <tbody>
                 @php
                     $db = new PDO('sqlite:' . database_path('database.sqlite'));
-                    $stmt = $db->query('SELECT * FROM jadwal LIMIT 3');
+                    $query = "SELECT 
+                        j.id, 
+                        j.hari, 
+                        j.waktu, 
+                        mk.nama_mk as mata_kuliah, 
+                        d.nama_dosen as dosen, 
+                        r.kode_ruang as ruangan, 
+                        s.nama_shift as kelas
+                    FROM jadwal j
+                    JOIN mata_kuliah mk ON j.mata_kuliah_id = mk.id
+                    JOIN dosen d ON j.dosen_id = d.id
+                    JOIN ruang r ON j.ruang_id = r.id
+                    JOIN shift s ON j.shift_id = s.id
+                    LIMIT 3";
+                    $stmt = $db->query($query);
                     $jadwals_pdo = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 @endphp
 
